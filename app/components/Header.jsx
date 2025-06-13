@@ -9,7 +9,7 @@ import {useAside} from '~/components/Aside';
 export function Header({header, isLoggedIn, cart, publicStoreDomain}) {
   const {shop, menu} = header;
   return (
-    <header className="header">
+    <header className="header bg-black">
       <NavLink prefetch="intent" to="/" style={activeLinkStyle} end>
         <strong>{shop.name}</strong>
       </NavLink>
@@ -40,7 +40,6 @@ export function HeaderMenu({
 }) {
   const className = `header-menu-${viewport}`;
   const {close} = useAside();
-
   return (
     <nav className={className} role="navigation">
       {viewport === 'mobile' && (

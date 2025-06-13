@@ -13,7 +13,7 @@ export async function loader({context}) {
   const {data, errors} = await context.customerAccount.query(
     CUSTOMER_DETAILS_QUERY,
   );
-
+  console.log(data, errors);
   if (errors?.length || !data?.customer) {
     throw new Error('Customer not found');
   }

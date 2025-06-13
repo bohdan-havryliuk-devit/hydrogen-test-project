@@ -2,6 +2,7 @@
  * @param {LoaderFunctionArgs}
  */
 export async function loader({context}) {
+  console.log('loooooooooooooooxxxxxxxxxxxx');
   return context.customerAccount.authorize();
 }
 
